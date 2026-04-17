@@ -1,0 +1,15 @@
+
+> shorebird-backend@1.0.0 dev
+> ts-node-dev --respawn --transpile-only src/index.ts
+
+[INFO] 18:15:49 ts-node-dev ver. 2.0.0 (using ts-node ver. 10.9.2, typescript ver. 6.0.2)
+◇ injected env (0) from .env // tip: ⌘ suppress logs { quiet: true }
+Server is running on port 3000
+(node:75685) NOTE: The AWS SDK for JavaScript (v2) has reached end-of-support.
+It will no longer receive updates or releases.
+
+Please migrate your code to use AWS SDK for JavaScript (v3).
+For more information, check the blog post at https://a.co/cUPnyil
+(Use `node --trace-warnings ...` to show where the warning was created)
+GET / - Body: undefined
+GET / 200 3ms

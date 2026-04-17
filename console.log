@@ -1,0 +1,29 @@
+
+> shorebird-console@0.1.0 dev
+> next dev
+
+▲ Next.js 16.2.3 (Turbopack)
+- Local:         http://localhost:3001
+- Network:       http://192.168.3.16:3001
+✓ Ready in 225ms
+
+Error: Requested and resolved page mismatch: //(dashboard/)/apps/[id]/releases/[releaseId]/page /(dashboard/)/apps/[id]/releases/[releaseId]/page
+    at ignore-listed frames
+⨯ unhandledRejection: Error: Requested and resolved page mismatch: //(dashboard/)/apps/[id]/releases/[releaseId]/page /(dashboard/)/apps/[id]/releases/[releaseId]/page
+    at ignore-listed frames
+⨯ unhandledRejection:  Error: Requested and resolved page mismatch: //(dashboard/)/apps/[id]/releases/[releaseId]/page /(dashboard/)/apps/[id]/releases/[releaseId]/page
+    at ignore-listed frames
+ GET / 404 in 280ms (next.js: 247ms, application-code: 32ms)
+ GET /apps/b94f8f0b-eca0-45f6-8dc7-99ee221f1d76/releases/1 404 in 408ms (next.js: 302ms, application-code: 107ms)
+ GET /apps/b94f8f0b-eca0-45f6-8dc7-99ee221f1d76/releases/1 404 in 42ms (next.js: 8ms, application-code: 35ms)
+ GET /apps/b94f8f0b-eca0-45f6-8dc7-99ee221f1d76/releases/1 404 in 23ms (next.js: 2ms, application-code: 21ms)
+ GET /apps/b94f8f0b-eca0-45f6-8dc7-99ee221f1d76 404 in 22ms (next.js: 7ms, application-code: 14ms)
+ GET /apps/b94f8f0b-eca0-45f6-8dc7-99ee221f1d76 404 in 22ms (next.js: 3ms, application-code: 19ms)
+ GET /apps/b94f8f0b-eca0-45f6-8dc7-99ee221f1d76/releases/1 404 in 23ms (next.js: 7ms, application-code: 16ms)
+ GET /apps/b94f8f0b-eca0-45f6-8dc7-99ee221f1d76/releases/1 404 in 23ms (next.js: 2ms, application-code: 21ms)
+ GET /apps/b94f8f0b-eca0-45f6-8dc7-99ee221f1d76 404 in 27ms (next.js: 7ms, application-code: 20ms)
+ GET /apps/b94f8f0b-eca0-45f6-8dc7-99ee221f1d76 404 in 30ms (next.js: 4ms, application-code: 26ms)
+ GET /apps 404 in 38ms (next.js: 6ms, application-code: 32ms)
+ GET /apps 404 in 40ms (next.js: 4ms, application-code: 36ms)
+ GET / 404 in 26ms (next.js: 4ms, application-code: 22ms)
+ GET / 404 in 37ms (next.js: 7ms, application-code: 30ms)

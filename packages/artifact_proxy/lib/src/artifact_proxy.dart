@@ -8,29 +8,17 @@ import 'package:shelf/shelf.dart';
 const String _explainerHtml = """
 <html>
 <head>
-<title>Shorebird Artifact Proxy</title>
+<title>Self-Hosted Shorebird Artifact Proxy</title>
 </head>
 <body>
 <p>
-This server proxies requests for Flutter artifacts to the correct location,
-depending on the engine revision.  Most artifacts are served from the standard
-`download.flutter.io` location, but a few artifacts are served from Shorebird's
-storage bucket to add support for code push.
-</p>
-<p>
-See <a href='https://docs.shorebird.dev/architecture'>
-https://docs.shorebird.dev/architecture</a> for more information.
+This server proxies requests for Flutter artifacts to your local MinIO storage.
 </p>
 <p>
 Source code can be found here:
 <a
 href='https://github.com/shorebirdtech/shorebird/tree/main/packages/artifact_proxy'>
 https://github.com/shorebirdtech/shorebird/tree/main/packages/artifact_proxy</a>
-</p>
-<p>
-If you're seeing problems with your Shorebird install, or are interested in
-replicating this proxy, please reach out to us over Discord.
-<a href='https://shorebird.dev/contact'>https://shorebird.dev/contact</a>
 </p>
 </body>
 </html>
@@ -118,7 +106,8 @@ String getFlutterArtifactLocation({
       ? artifactPath.replaceAll(r'$engine', engine)
       : artifactPath;
 
-  return 'https://storage.googleapis.com/$adjustedPath';
+  // Self-hosted: Redirect to local MinIO
+  return 'http://localhost:9000/shorebird-artifacts/$adjustedPath';
 }
 
 /// Returns the location of the artifact at [artifactPath] using the
@@ -129,5 +118,6 @@ String getShorebirdArtifactLocation({
   required String bucket,
 }) {
   final adjustedPath = artifactPath.replaceAll(r'$engine', engine);
-  return 'https://storage.googleapis.com/$bucket/$adjustedPath';
+  // Self-hosted: Redirect to local MinIO (overriding the bucket param)
+  return 'http://localhost:9000/shorebird-artifacts/$adjustedPath';
 }
